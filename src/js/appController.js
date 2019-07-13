@@ -26,7 +26,8 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojknockouttemplateutils',
          'dashboard': {label: 'Dashboard', isDefault: true},
          'incidents': {label: 'Incidents'},
          'customers': {label: 'Customers'},
-         'about': {label: 'About'}
+         'about': {label: 'About'},
+         'vendors': {label: 'Vendors'}
        });
       Router.defaults['urlAdapter'] = new Router.urlParamAdapter();
 
