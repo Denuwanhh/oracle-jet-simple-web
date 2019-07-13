@@ -12,7 +12,7 @@ define(['ojs/ojcore','knockout','jquery', 'ojs/ojchart'],
     function DashboardViewModel() {
       var self = this;
 
-      self.name = ko.observable("Denuwan");
+      self.search = ko.observable("Type Here");
 
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.

@@ -6,11 +6,15 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['knockout'],
- function(ko) {
+define(['ojs/ojcore','knockout','jquery','text!data/data.json','ojs/ojchart'],
+ function(oj, ko, $, file) {
 
     function IncidentsViewModel() {
       var self = this;
+
+      self.chartnameone   = ko.observable("Bar Chat used ojComponent");
+      self.chartnametwo   = ko.observable("Pie Chat used oj-chart");
+      self.chartnamethree = ko.observable("Pie Chat used oj-chart and Load data by external resource");
 
       var data = [{name: "Denuwan", items: [43]},
                   {name: "Saman", items: [23]},
@@ -19,6 +23,7 @@ define(['knockout'],
                   {name: "Pawara", items: [50]},];
 
       self.datasource = ko.observableArray(data);
+      self.databyfile = ko.observableArray(JSON.parse(file));
 
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
