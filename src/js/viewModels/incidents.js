@@ -6,15 +6,16 @@
 /*
  * Your incidents ViewModel code goes here
  */
-define(['ojs/ojcore','knockout','jquery','text!data/data.json','ojs/ojchart'],
+define(['ojs/ojcore','knockout','jquery','text!data/data.json','ojs/ojchart','ojs/ojselectcombobox'],
  function(oj, ko, $, file) {
 
     function IncidentsViewModel() {
       var self = this;
 
       self.chartnameone   = ko.observable("Bar Chat used ojComponent");
-      self.chartnametwo   = ko.observable("Pie Chat used oj-chart");
+      self.chartnametwo   = ko.observable("Pie/Pie Chat used oj-chart");
       self.chartnamethree = ko.observable("Pie Chat used oj-chart and Load data by external resource");
+      self.val            = ko.observable("pie");
 
       var data = [{name: "Denuwan", items: [43]},
                   {name: "Saman", items: [23]},

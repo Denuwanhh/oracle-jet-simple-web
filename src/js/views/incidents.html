@@ -3,23 +3,30 @@
  The Universal Permissive License (UPL), Version 1.0
  -->
 <div class="oj-hybrid-padding">
-  <h1>Incidents Content Area</h1>
+ 	<h1>Incidents Content Area</h1>
 
-  <h2><span data-bind="text: chartnameone"></span></h2>
-  <div data-bind="ojComponent: {
-  	component: 'ojChart',
-  	type: 'bar',
-  	series: datasource
+	<oj-label for="combobox">Select data represent method</oj-label>
+		<oj-combobox-one id="combobox" value="{{val}}"
+		  style="max-width:20em">
+			<oj-option value="bar">Bar Chart</oj-option>
+			<oj-option value="pie">Pie Chart</oj-option>
+		</oj-combobox-one>
+	
+	<h2><span data-bind="text: chartnametwo"></span></h2>
+	<oj-chart type="[[val]]" series="[[datasource]]"></oj-chart>
+
+	<h2><span data-bind="text: chartnameone"></span></h2>
+	<div data-bind="ojComponent: {
+		component: 'ojChart',
+		type: 'bar',
+		series: datasource
 	}">	
-  </div>
+	</div>
 
-  <h2><span data-bind="text: chartnametwo"></span></h2>
-  <oj-chart type="pie" series="[[datasource]]"></oj-chart>
+	<h2><span data-bind="text: chartnamethree"></span></h2>
+	<oj-chart type="pie" series="[[databyfile]]"></oj-chart>
 
-  <h2><span data-bind="text: chartnamethree"></span></h2>
-  <oj-chart type="pie" series="[[databyfile]]"></oj-chart>
-
-  <div>
-      To change the content of this section, you will make edits to the incidents.html file located in the /js/views folder.
-  </div>
+	<div>
+	  To change the content of this section, you will make edits to the incidents.html file located in the /js/views folder.
+	</div>
 </div>
