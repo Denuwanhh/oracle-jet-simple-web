@@ -6,11 +6,18 @@
 /*
  * Your about ViewModel code goes here
  */
-define([],
- function() {
+ define(['ojs/ojcore', 'knockout', 'ojs/ojpictochart', 'ojs/ojknockout', 'ojs/ojgauge'],
+   function(oj, ko) {
 
     function VendorsViewModel() {
       var self = this;
+
+      var data =   [{name: "Have Problems", count: 7, shape : "human", color : "#ed6647"},
+                    {name: "Doing Well", shape : "human", count: 3}];
+
+      self.dataProvider = ko.observableArray(data);
+      self.value2 = ko.observable(40);
+
       // Below are a set of the ViewModel methods invoked by the oj-module component.
       // Please reference the oj-module jsDoc for additional information.
 
@@ -22,14 +29,14 @@ define([],
        * and inserted into the DOM and after the View is reconnected
        * after being disconnected.
        */
-      self.connected = function() {
+       self.connected = function() {
         // Implement if needed
       };
 
       /**
        * Optional ViewModel method invoked after the View is disconnected from the DOM.
        */
-      self.disconnected = function() {
+       self.disconnected = function() {
         // Implement if needed
       };
 
@@ -37,7 +44,7 @@ define([],
        * Optional ViewModel method invoked after transition to the new View is complete.
        * That includes any possible animation between the old and the new View.
        */
-      self.transitionCompleted = function() {
+       self.transitionCompleted = function() {
         // Implement if needed
       };
     }
@@ -47,6 +54,6 @@ define([],
      * each time the view is displayed.  Return an instance of the ViewModel if
      * only one instance of the ViewModel is needed.
      */
-    return new VendorsViewModel();
-  }
-);
+     return new VendorsViewModel();
+   }
+   );

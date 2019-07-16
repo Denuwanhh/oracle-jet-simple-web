@@ -1,10 +1,44 @@
 <!--
  Copyright (c) 2014, 2019, Oracle and/or its affiliates.
  The Universal Permissive License (UPL), Version 1.0
- -->
+-->
 <div class="oj-hybrid-padding">
-  <h1>Vendors Content Area</h1>
-  <div>
-      To change the content of this section, you will make edits to the about.html file located in the /js/views folder.
-  </div>
+	<h1>Vendors Content Area.</h1>
+
+	<table>
+		<tr>
+			<td>
+				<h3>Picto chart</h3>
+			</td>
+			<td>
+				<oj-picto-chart id='pictochart1' 
+				items="[[dataProvider]]"
+				animation-on-display="auto"
+				column-count="5"
+				style="vertical-align:middle; margin-right:15px">
+			</oj-picto-chart>
+			<div style="display:inline-block; vertical-align:middle; font-weight:bold">
+				<span style="color:#333333; font-size:1.1em">7 out of 10 Vendors</span><br>
+				<span style="color:#ed6647; font-size:1.3em">have problems.</span>
+			</div>
+		</td>
+	</tr>
+	<tr style="height: 100px">
+		<td>
+			<h3>Gauge</h3>
+		</td>
+		<td>
+	        <oj-status-meter-gauge 
+            id="gauge12"
+            min="0" 
+            max="100" 
+            value="{{value2}}" 
+            orientation="circular"
+            style="margin-top: 5px;margin-bottom: 5px;height: 100px;width: 45%">
+          </oj-status-meter-gauge>
+	</td>
+</tr>
+</table>
+
+
 </div>
