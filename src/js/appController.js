@@ -27,7 +27,8 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojknockouttemplateutils',
          'incidents': {label: 'Incidents'},
          'customers': {label: 'Customers'},
          'about': {label: 'About'},
-         'vendors': {label: 'Vendors'}
+         'vendors': {label: 'Vendors'},
+         'home': {label: 'Home'}
        });
       Router.defaults['urlAdapter'] = new Router.urlParamAdapter();
 
@@ -61,7 +62,9 @@ define(['knockout', 'ojs/ojmodule-element-utils', 'ojs/ojknockouttemplateutils',
       {name: 'Vendors', id: 'vendors',
        iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-person-icon-24'},
       {name: 'About', id: 'about',
-       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'}
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-info-icon-24'},
+      {name: 'Home', id: 'home',
+       iconClass: 'oj-navigationlist-item-icon demo-icon-font-24 demo-home-icon-24'}
       ];
       self.navDataProvider = new ArrayDataProvider(navData, {keyAttributes: 'id'});
 
