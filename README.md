@@ -10,7 +10,8 @@ This project based on  **[Oracle Learning Library](https://www.youtube.com/chann
 
 Install node-modules into your working directory.
 ```
-npm install -g node-modules
+cd oracle-jet-simple-web
+npm install @oracle/ojet-cli --save
 ```
 Build your app, and run.
 ```
